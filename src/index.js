@@ -1,4 +1,4 @@
-import sitemapSVG from '@plone/volto/icons/form.svg';
+import sitemapSVG from '@plone/volto/icons/repeat.svg';
 import RepeatableContentEdit from './RepeatableContentBlock/Edit';
 import RepeatableContentView from './RepeatableContentBlock/View';
 
