@@ -1,6 +1,6 @@
 import sitemapSVG from '@plone/volto/icons/form.svg';
-import RepeatableContentEdit from './components/Blocks/RepeatableContentBlock/Edit';
-import RepeatableContentView from './components/Blocks/RepeatableContentBlock/View';
+import RepeatableContentEdit from './RepeatableContentBlock/Edit';
+import RepeatableContentView from './RepeatableContentBlock/View';
 
 const applyConfig = (config) => {
   config.blocks.blocksConfig = {
