@@ -2,6 +2,10 @@
 
 ## Introduction
 
+This block is used to replicate another page content.
+
+The repeatable content must be a ContentType "page".
+
 ## Development
 
 You can develop an add-on in isolation using the boilerplate already provided by the add-on generator.
@@ -148,4 +152,5 @@ Run
 ```shell
 make release-rc
 ```
+
 # volto-repeatable-content-block
