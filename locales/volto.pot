@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Plone\n"
-"POT-Creation-Date: 2024-02-28T13:52:19.752Z\n"
+"POT-Creation-Date: 2024-03-01T11:00:31.104Z\n"
 "Last-Translator: Plone i18n <plone-i18n@lists.sourceforge.net>\n"
 "Language-Team: Plone i18n <plone-i18n@lists.sourceforge.net>\n"
 "Content-Type: text/plain; charset=utf-8\n"
@@ -14,41 +14,41 @@ msgstr ""
 "Domain: volto\n"
 
 #. Default: "Content to be replicated"
-#: components/Blocks/RepeatableContentBlock/Sidebar
+#: RepeatableContentBlock/Sidebar
 msgid "Content text"
 msgstr ""
 
 #. Default: "Link a"
-#: components/Widget/LinkToWidget
+#: Widget/LinkToWidget/LinkToWidget
 msgid "Link to"
 msgstr ""
 
 #. Default: "Apri in un nuovo tab"
-#: components/Widget/LinkToWidget
+#: Widget/LinkToWidget/LinkToWidget
 msgid "Open in a new tab"
 msgstr ""
 
 #. Default: "Attention: This page does not have any content. The title and description are not considered content and won't be showed"
-#: components/Blocks/RepeatableContentBlock/Body
+#: RepeatableContentBlock/Body
 msgid "emptyBlock"
 msgstr ""
 
 #. Default: "Please select an content in the sidebar in order to show it here - Only page type content is allowed"
-#: components/Blocks/RepeatableContentBlock/Edit
+#: RepeatableContentBlock/Edit
 msgid "emptySelection"
 msgstr ""
 
 #. Default: "The content path does not exist. Please select a new one or delet this block"
-#: components/Blocks/RepeatableContentBlock/Edit
+#: RepeatableContentBlock/Edit
 msgid "noHref"
 msgstr ""
 
 #. Default: "Select content"
-#: components/Blocks/RepeatableContentBlock/Sidebar
+#: RepeatableContentBlock/Sidebar
 msgid "select_content"
 msgstr ""
 
 #. Default: "Blocco sconosciuto"
-#: components/Widget/RichText/RenderBlocks
+#: Widget/RichText/RenderBlocks
 msgid "unknownBlock"
 msgstr ""
