@@ -16,12 +16,14 @@ const messages = defineMessages({
     defaultMessage: 'Blocco sconosciuto',
   },
 });
+
 /**
  * RenderBlocks view component class.
  * @function RenderBlocks
  * @params {object} content: Content object.
  * @returns {string} Markup of the component.
  */
+
 const RenderBlocks = ({
   data,
   content,
@@ -78,8 +80,8 @@ const RenderBlocks = ({
   ) : null;
 };
 
-export default RenderBlocks;
-
 RenderBlocks.propTypes = {
   data: PropTypes.any,
 };
+
+export default RenderBlocks;

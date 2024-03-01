@@ -1,5 +1,5 @@
 import PropTypes from 'prop-types';
-import { RichTextRender } from '../Widget/RichText/RichTextRender';
+import { RichTextRender } from '../Widget';
 import { defineMessages, useIntl } from 'react-intl';
 
 const Body = (props) => {

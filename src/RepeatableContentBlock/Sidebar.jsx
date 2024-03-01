@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { Segment } from 'semantic-ui-react';
 import { defineMessages, FormattedMessage, useIntl } from 'react-intl';
-import { LinkToWidget } from '../Widget/LinkToWidget';
+import LinkToWidget from '../Widget/LinkToWidget/LinkToWidget';
 
 const messages = defineMessages({
   select_content: {
