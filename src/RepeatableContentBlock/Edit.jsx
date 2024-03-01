@@ -36,7 +36,6 @@ const Edit = ({ block, data, selected, onChangeBlock, openObjectBrowser }) => {
     return () => dispatch(resetContent(data));
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [dispatch, block, data.href]);
-  console.log('edit data', data);
 
   return (
     <>

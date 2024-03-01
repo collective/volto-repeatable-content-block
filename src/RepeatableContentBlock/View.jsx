@@ -26,7 +26,6 @@ const View = ({ data, id }) => {
     return () => dispatch(resetContent(id));
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [data.href]);
-  console.log('view data', data);
 
   return data.href && data.href.startsWith('http') ? (
     loaded ? (

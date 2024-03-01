@@ -17,9 +17,6 @@ const Body = (props) => {
     serif: false,
     data: props.data,
   });
-  console.log('props body', props);
-  console.log('body props.content', props.content);
-  console.log('body richTextContent()', richTextContent);
 
   return richTextContent !== null ? (
     richTextContent

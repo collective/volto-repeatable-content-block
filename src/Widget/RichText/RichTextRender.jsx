@@ -42,7 +42,6 @@ const richTextHasContent = (content) => {
  */
 const RichTextRender = ({ content, add_class, serif = true }) => {
   let hasContent = richTextHasContent(content);
-  console.log('hasContent', hasContent);
 
   return hasContent ? (
     hasBlocksData(content) ? (
