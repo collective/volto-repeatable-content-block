@@ -1,5 +1,5 @@
 import PropTypes from 'prop-types';
-import { RichTextRender } from '../Widget';
+import { RichTextRender } from '../Widget/RichText/RichTextRender';
 import { defineMessages, useIntl } from 'react-intl';
 
 const Body = (props) => {
@@ -12,11 +12,14 @@ const Body = (props) => {
         "Attention: This page does not have any content. The title and description are not considered content and won't be showed",
     },
   });
-
   const richTextContent = RichTextRender({
     content: props.content,
     serif: false,
+    data: props.data,
   });
+  console.log('props body', props);
+  console.log('body props.content', props.content);
+  console.log('body richTextContent()', richTextContent);
 
   return richTextContent !== null ? (
     richTextContent

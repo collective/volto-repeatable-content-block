@@ -46,7 +46,6 @@
     "@plone/volto": "^17.0.0"
   },
   "dependencies": {
-    "design-react-kit": "5.0.0-1",
     "papaparse": "5.4.1"
   }
 }

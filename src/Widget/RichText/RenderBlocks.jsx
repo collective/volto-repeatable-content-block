@@ -16,53 +16,47 @@ const messages = defineMessages({
     defaultMessage: 'Blocco sconosciuto',
   },
 });
-
 /**
  * RenderBlocks view component class.
  * @function RenderBlocks
  * @params {object} content: Content object.
  * @returns {string} Markup of the component.
  */
-
-const RenderBlocks = ({
-  data,
-  content,
-  exclude = ['title', 'description'],
-}) => {
+const RenderBlocks = ({ content, exclude = ['title', 'description'] }) => {
   /* Render text or blocks in view, skip title and description blocks by default*/
-  const blockContent = data ?? content; // For backwards compatibility of old blocks
-  const blocksFieldname = getBlocksFieldname(blockContent);
-  const blocksLayoutFieldname = getBlocksLayoutFieldname(blockContent);
+  const blocksFieldname = getBlocksFieldname(content);
+  const blocksLayoutFieldname = getBlocksLayoutFieldname(content);
   const intl = useIntl();
   const location = useLocation();
 
   const items =
-    blockContent[blocksLayoutFieldname]?.items?.length > 0
-      ? blockContent[blocksLayoutFieldname].items.filter((block) => {
-          const blockType = blockContent[blocksFieldname]?.[block]?.['@type'];
+    content[blocksLayoutFieldname]?.items?.length > 0
+      ? content[blocksLayoutFieldname].items.filter((block) => {
+          const blockType = content[blocksFieldname]?.[block]?.['@type'];
           return exclude.indexOf(blockType) < 0;
         })
       : null;
 
   //è il caso in cui c'è solo il primo blocco di testo vuoto. Non si vuole renderizzare il <br/>
   if (items?.length === 1) {
-    const block = blockContent[blocksFieldname][items[0]];
+    const block = content[blocksFieldname][items[0]];
     if (block['@type'] === 'text' && !block.text) {
       return null;
     }
   }
+
   return items?.length > 0 ? (
     <>
       {map(items, (block) => {
-        const blockType = blockContent[blocksFieldname]?.[block]?.['@type'];
+        const blockType = content[blocksFieldname]?.[block]?.['@type'];
         const Block = config.blocks.blocksConfig[blockType]?.['view'] || null;
         if (Block != null) {
           return (
             <Block
               key={block}
               id={block}
-              properties={content ?? data}
-              data={blockContent[blocksFieldname][block]}
+              properties={content}
+              data={content[blocksFieldname][block]}
               path={getBaseUrl(location?.pathname || '')}
             />
           );
@@ -70,7 +64,7 @@ const RenderBlocks = ({
           return (
             <div key={block}>
               {intl.formatMessage(messages.unknownBlock, {
-                block: blockContent[blocksFieldname]?.[block]?.['@type'],
+                block: content[blocksFieldname]?.[block]?.['@type'],
               })}
             </div>
           );
@@ -80,8 +74,8 @@ const RenderBlocks = ({
   ) : null;
 };
 
-RenderBlocks.propTypes = {
-  data: PropTypes.any,
-};
-
 export default RenderBlocks;
+
+RenderBlocks.propTypes = {
+  content: PropTypes.any,
+};
