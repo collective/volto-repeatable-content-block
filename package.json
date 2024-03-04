@@ -41,7 +41,9 @@
     "stylelint-config-idiomatic-order": "9.0.0",
     "stylelint-config-sass-guidelines": "10.0.0",
     "stylelint-prettier": "4.0.2",
-    "@release-it/conventional-changelog": "^3.3.0"
+    "@release-it/conventional-changelog": "^3.3.0",
+    "@commitlint/cli": "^16.0.1",
+    "@commitlint/config-conventional": "^16.0.0"
   },
   "peerDependencies": {
     "@plone/volto": "^17.0.0"
