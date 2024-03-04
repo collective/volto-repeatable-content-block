@@ -1,3 +1,21 @@
+
+
+### [1.0.2](https://github.com/collective/volto-repeatable-content-block/compare/v1.0.1...v1.0.2) (2024-03-04)
+
+
+### Bug Fixes
+
+* dependencies ([01e9b5d](https://github.com/collective/volto-repeatable-content-block/commit/01e9b5d9010f83554b9e2b8a0a51e13761a5f4b1))
+* dependencies ([60469d1](https://github.com/collective/volto-repeatable-content-block/commit/60469d18d05c29c3dc50814709fba22d45a7c359))
+* dependencies ([23791f4](https://github.com/collective/volto-repeatable-content-block/commit/23791f4e72f437c1b440cf8d60fa4649d5a721f4))
+
+
+### Maintenance
+
+* added .release-it.json file ([7e8a3a0](https://github.com/collective/volto-repeatable-content-block/commit/7e8a3a063fa518b4e201defc5d7eb01a29b9866d))
+* added release-it conventional changelog ([7a34666](https://github.com/collective/volto-repeatable-content-block/commit/7a346669926eb0fbd275a6c1988bf3d6d7eb5f0f))
+* commit lint config ([e7f9157](https://github.com/collective/volto-repeatable-content-block/commit/e7f9157a7c2bb9c1b23f54e2ea14b37a574839ec))
+
 ### Changelog
 
 All notable changes to this project will be documented in this file. Dates are displayed in UTC.
