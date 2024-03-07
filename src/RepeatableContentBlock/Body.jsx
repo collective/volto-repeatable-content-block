@@ -1,29 +1,35 @@
 import PropTypes from 'prop-types';
-import { RichTextRender } from '../Widget/RichText/RichTextRender';
 import { defineMessages, useIntl } from 'react-intl';
+import { hasBlocksData } from '@plone/volto/helpers';
+import RenderBlocks from '../helpers/RichText/RenderBlocks';
 
-const Body = (props) => {
+const Body = ({ content, edit, data }) => {
   const intl = useIntl();
 
   const messages = defineMessages({
     emptyBlock: {
       id: 'emptyBlock',
       defaultMessage:
-        "Attention: This page does not have any content. The title and description are not considered content and won't be showed",
+        "Attention: This content does not have any content. The title and description are not considered content and won't be showed",
     },
   });
-  const richTextContent = RichTextRender({
-    content: props.content,
-    serif: false,
-    data: props.data,
-  });
 
-  return richTextContent !== null ? (
-    richTextContent
-  ) : props.edit ? (
-    <p className="empty-selection">{intl.formatMessage(messages.emptyBlock)}</p>
-  ) : (
-    <></>
+  const renderedContent =
+    data.showContentText && hasBlocksData(content) ? (
+      RenderBlocks({ content: content })
+    ) : (
+      <></>
+    );
+
+  return (
+    renderedContent ??
+    (edit ? (
+      <p className="empty-selection">
+        {intl.formatMessage(messages.emptyBlock)}
+      </p>
+    ) : (
+      <></>
+    ))
   );
 };
 
@@ -34,7 +40,6 @@ const Body = (props) => {
  */
 Body.propTypes = {
   content: PropTypes.objectOf(PropTypes.any),
-  pathname: PropTypes.string,
 };
 
 export default Body;

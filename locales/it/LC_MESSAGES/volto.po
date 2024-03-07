@@ -1,42 +1,40 @@
 msgid ""
 msgstr ""
-"Project-Id-Version: Plone\n"
-"POT-Creation-Date: 2024-03-07T13:47:58.845Z\n"
-"Last-Translator: Plone i18n <plone-i18n@lists.sourceforge.net>\n"
-"Language-Team: Plone i18n <plone-i18n@lists.sourceforge.net>\n"
-"Content-Type: text/plain; charset=utf-8\n"
-"Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=1; plural=0;\n"
-"MIME-Version: 1.0\n"
-"Language-Code: en\n"
-"Language-Name: English\n"
-"Preferred-Encodings: utf-8\n"
-"Domain: volto\n"
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: \n"
+"PO-Revision-Date: \n"
+"Last-Translator: \n"
+"Language: \n"
+"Language-Team: \n"
+"Content-Type: \n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
 
 #. Default: "Content to be replicated"
 #: RepeatableContentBlock/Sidebar
 msgid "Content to be replicated"
-msgstr ""
+msgstr "Contenuto da replicare"
 
 #. Default: "Attention: This content does not have any content. The title and description are not considered content and won't be showed"
 #: RepeatableContentBlock/Body
 msgid "emptyBlock"
-msgstr ""
+msgstr "Attenzione: questo contentuo non ha nessun elemento da mostrare. Il titolo e la descrizioone non sono considerati e non vengono mostrati."
 
 #. Default: "Please select an content in the sidebar in order to show it here"
 #: RepeatableContentBlock/Edit
 msgid "repeatable-content-block-emptySelection"
-msgstr ""
+msgstr "Seleziona un contenuto dalla sidebar a lato per mostrarlo qui. "
 
 #. Default: "The content path does not exist. Please select a new one or delete this block"
 #: RepeatableContentBlock/Edit
 msgid "repeatable-content-block-pathNotExists"
-msgstr ""
+msgstr "Il percorso selezionato non esiste. Selezionare un nuovo contenuto o rimuovere questo blocco."
 
 #. Default: "Select content"
 #: RepeatableContentBlock/Sidebar
 msgid "select_content"
-msgstr ""
+msgstr "Seleziona un contenuto"
 
 #. Default: "Blocco sconosciuto"
 #: helpers/RichText/RenderBlocks

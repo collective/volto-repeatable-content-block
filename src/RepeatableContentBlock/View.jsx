@@ -13,14 +13,16 @@ const View = ({ data, id }) => {
   const dispatch = useDispatch();
   const loaded = useSelector((state) => {
     return (
-      (state.content.subrequests[id]?.loaded &&
-        !state.content.subrequests[id]?.loading) ||
-      state.content.subrequests[id]?.error
+      state.content.subrequests[id]?.loaded &&
+      !state.content.subrequests[id]?.error
     );
+  });
+  const loading = useSelector((state) => {
+    return state.content.subrequests[id]?.loading;
   });
 
   useEffect(() => {
-    if (data.href) {
+    if (data.href && !loaded && !loading) {
       dispatch(getContent(flattenToAppURL(data.href), null, id));
     }
     return () => dispatch(resetContent(id));
@@ -28,19 +30,16 @@ const View = ({ data, id }) => {
   }, [data.href]);
 
   return data.href && data.href.startsWith('http') ? (
-    loaded ? (
-      data.text /*il contenuto linkato è pubblicato*/ ? (
-        <div className="block repeatableContentBlock">
-          <Body content={content} />
-        </div>
-      ) : (
-        /*il contenuto linkato è privato*/
-        <></>
-      )
-    ) : (
-      <div className="block repeatableContentBlock">
+    !loading && content ? (
+      <div className="repeatableContentBlock">
+        <Body content={content} data={data} />
+      </div>
+    ) : loading ? (
+      <div className="repeatableContentBlock">
         <Skeleton />
       </div>
+    ) : (
+      <></>
     )
   ) : (
     <></>
