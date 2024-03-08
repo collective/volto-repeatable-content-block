@@ -14,7 +14,7 @@ import config from '@plone/volto/registry';
 const messages = defineMessages({
   unknownBlock: {
     id: 'unknownBlock',
-    defaultMessage: 'Blocco sconosciuto',
+    defaultMessage: 'Unknown Block',
   },
 });
 /**

@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Plone\n"
-"POT-Creation-Date: 2024-03-07T13:47:58.845Z\n"
+"POT-Creation-Date: 2024-03-08T09:39:50.563Z\n"
 "Last-Translator: Plone i18n <plone-i18n@lists.sourceforge.net>\n"
 "Language-Team: Plone i18n <plone-i18n@lists.sourceforge.net>\n"
 "Content-Type: text/plain; charset=utf-8\n"
@@ -23,6 +23,11 @@ msgstr ""
 msgid "emptyBlock"
 msgstr ""
 
+#. Default: "Show full-width image"
+#: RepeatableContentBlock/Sidebar
+msgid "imageFullWidth"
+msgstr ""
+
 #. Default: "Please select an content in the sidebar in order to show it here"
 #: RepeatableContentBlock/Edit
 msgid "repeatable-content-block-emptySelection"
@@ -38,7 +43,27 @@ msgstr ""
 msgid "select_content"
 msgstr ""
 
-#. Default: "Blocco sconosciuto"
-#: helpers/RichText/RenderBlocks
+#. Default: "Show content description"
+#: RepeatableContentBlock/Sidebar
+msgid "showContentDescription"
+msgstr ""
+
+#. Default: "Show content image (if available)"
+#: RepeatableContentBlock/Sidebar
+msgid "showContentImage"
+msgstr ""
+
+#. Default: "Show content text"
+#: RepeatableContentBlock/Sidebar
+msgid "showContentText"
+msgstr ""
+
+#. Default: "Show content title"
+#: RepeatableContentBlock/Sidebar
+msgid "showContentTitle"
+msgstr ""
+
+#. Default: "Unknown Block"
+#: helpers/RenderBlocks
 msgid "unknownBlock"
 msgstr ""

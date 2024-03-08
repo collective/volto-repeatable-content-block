@@ -21,6 +21,11 @@ msgstr ""
 msgid "emptyBlock"
 msgstr ""
 
+#. Default: "Show full-width image"
+#: RepeatableContentBlock/Sidebar
+msgid "imageFullWidth"
+msgstr ""
+
 #. Default: "Please select an content in the sidebar in order to show it here"
 #: RepeatableContentBlock/Edit
 msgid "repeatable-content-block-emptySelection"
@@ -36,7 +41,27 @@ msgstr ""
 msgid "select_content"
 msgstr ""
 
-#. Default: "Blocco sconosciuto"
-#: helpers/RichText/RenderBlocks
+#. Default: "Show content description"
+#: RepeatableContentBlock/Sidebar
+msgid "showContentDescription"
+msgstr ""
+
+#. Default: "Show content image (if available)"
+#: RepeatableContentBlock/Sidebar
+msgid "showContentImage"
+msgstr ""
+
+#. Default: "Show content text"
+#: RepeatableContentBlock/Sidebar
+msgid "showContentText"
+msgstr ""
+
+#. Default: "Show content title"
+#: RepeatableContentBlock/Sidebar
+msgid "showContentTitle"
+msgstr ""
+
+#. Default: "Unknown Block"
+#: helpers/RenderBlocks
 msgid "unknownBlock"
 msgstr ""

@@ -4,7 +4,12 @@
 
 This block is used to replicate another page content.
 
-The repeatable content must be a ContentType "page".
+For the content select you could decide to repeat one or more one of this options:
+
+- title
+- description
+- blocks
+- image
 
 ## Development
 
