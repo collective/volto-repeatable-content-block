@@ -10,18 +10,21 @@ import Sidebar from './Sidebar';
 
 const messages = defineMessages({
   emptySelection: {
-    id: 'emptySelection',
+    id: 'repeatable-content-block-emptySelection',
     defaultMessage:
-      'Please select an content in the sidebar in order to show it here - Only page type content is allowed',
+      'Please select an content in the sidebar in order to show it here',
   },
-  noHref: {
-    id: 'noHref',
+  pathNotExists: {
+    id: 'repeatable-content-block-pathNotExists',
     defaultMessage:
-      'The content path does not exist. Please select a new one or delet this block',
+      'The content path does not exist. Please select a new one or delete this block',
   },
 });
 
 const Edit = ({ block, data, selected, onChangeBlock, openObjectBrowser }) => {
+  const contentRequest = useSelector(
+    (state) => state.content.subrequests[block],
+  );
   const content = useSelector(
     (state) => state.content.subrequests[block]?.data,
   );
@@ -30,7 +33,7 @@ const Edit = ({ block, data, selected, onChangeBlock, openObjectBrowser }) => {
   const dispatch = useDispatch();
 
   useEffect(() => {
-    if (data.href) {
+    if (data.href && !contentRequest?.loading) {
       dispatch(getContent(flattenToAppURL(data.href), null, block));
     }
     return () => dispatch(resetContent(data));
@@ -39,16 +42,20 @@ const Edit = ({ block, data, selected, onChangeBlock, openObjectBrowser }) => {
 
   return (
     <>
-      {data.href ? (
-        content?.blocks && data.href !== '' && !data.href.startsWith('../') ? (
-          <div className="public-ui">
-            <div className="block repeatableContentBlock">
-              <Body content={content} edit={true} />
-            </div>
-          </div>
+      {data.href?.length > 0 ? (
+        !data.href.startsWith('../') ? (
+          <>
+            {content?.blocks && (
+              <div className="public-ui">
+                <div className="block repeatableContentBlock">
+                  <Body content={content} edit={true} data={data} />
+                </div>
+              </div>
+            )}
+          </>
         ) : (
           <p className="empty-selection">
-            {intl.formatMessage(messages.noHref)}
+            {intl.formatMessage(messages.pathNotExists)}
           </p>
         )
       ) : (
