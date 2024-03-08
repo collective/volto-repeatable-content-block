@@ -1,5 +1,24 @@
 
 
+## [1.1.0](https://github.com/collective/volto-repeatable-content-block/compare/v1.0.2...v1.1.0) (2024-03-08)
+
+
+### Features
+
+* add new options ([08ca565](https://github.com/collective/volto-repeatable-content-block/commit/08ca565d17511da7e4229469b2677b7e0e6d583b))
+
+
+### Bug Fixes
+
+* dependecies ([bed0284](https://github.com/collective/volto-repeatable-content-block/commit/bed0284d781fee4be2573f7732d345e82fe3489c))
+* linters ([e01db78](https://github.com/collective/volto-repeatable-content-block/commit/e01db78892177c136c477ea7c57df68d9e75be6b))
+* view body ([792412d](https://github.com/collective/volto-repeatable-content-block/commit/792412dcef2292e55c8bf34cfa98f1d32cfe50c5))
+
+
+### Maintenance
+
+* news file ([04dc924](https://github.com/collective/volto-repeatable-content-block/commit/04dc92483d9fe9712bd02b03715d35a68c8153ec))
+
 ### [1.0.2](https://github.com/collective/volto-repeatable-content-block/compare/v1.0.1...v1.0.2) (2024-03-04)
 
 
