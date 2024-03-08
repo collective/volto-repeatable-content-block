@@ -1,3 +1,4 @@
+/* eslint-disable react-hooks/exhaustive-deps */
 import React, { useEffect } from 'react';
 import PropTypes from 'prop-types';
 import { Segment } from 'semantic-ui-react';
@@ -38,7 +39,7 @@ const Sidebar = ({ block, data, onChangeBlock, openObjectBrowser }) => {
       !data.showContentDescription &&
       !data.showContentText &&
       !data.showContentTitle &&
-      data.href == undefined
+      data.href === undefined
     ) {
       //is new block, set default showContentText=true
       onChangeBlock(block, {

@@ -45,7 +45,7 @@ const RenderBlocks = ({ content, exclude = ['title', 'description'] }) => {
       if (block['@type'] === 'text' && !block.text) {
         return null;
       }
-      if (block['@type'] === 'slate' && block.plaintext?.length == 0) {
+      if (block['@type'] === 'slate' && block.plaintext?.length === 0) {
         return null;
       }
     }
