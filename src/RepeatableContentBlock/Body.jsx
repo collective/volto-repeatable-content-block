@@ -1,31 +1,28 @@
 import PropTypes from 'prop-types';
 import { defineMessages, useIntl } from 'react-intl';
 
-import { hasBlocksData } from '@plone/volto/helpers';
 import { UniversalLink } from '@plone/volto/components';
-import RenderBlocks from '../helpers/RenderBlocks';
+import RenderContentContent from './RenderContentContent';
 import './style.css';
 import config from '@plone/volto/registry';
+
+const messages = defineMessages({
+  emptyBlock: {
+    id: 'emptyBlock',
+    defaultMessage:
+      "Attention: This content does not have any content. The title and description are not considered content and won't be showed",
+  },
+});
 
 const Body = ({ content, edit, data }) => {
   const intl = useIntl();
   const Image = config.getComponent({ name: 'Image' }).component;
-  const messages = defineMessages({
-    emptyBlock: {
-      id: 'emptyBlock',
-      defaultMessage:
-        "Attention: This content does not have any content. The title and description are not considered content and won't be showed",
-    },
-  });
 
-  const renderedBlocks =
-    data.showContentText && hasBlocksData(content)
-      ? RenderBlocks({ content: content })
-      : null;
+  const renderContent = RenderContentContent({ content: content });
 
   return data.showContentTitle ||
     data.showContentDescription ||
-    renderedBlocks ||
+    renderContent ||
     data.showContentImage ? (
     <>
       {(data.showContentTitle ||
@@ -58,7 +55,7 @@ const Body = ({ content, edit, data }) => {
           </UniversalLink>
         </div>
       )}
-      {renderedBlocks ?? <></>}
+      {renderContent ?? <></>}
     </>
   ) : edit ? (
     <p className="empty-selection">{intl.formatMessage(messages.emptyBlock)}</p>

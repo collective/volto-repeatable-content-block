@@ -19,7 +19,7 @@ msgstr "Contenuto da replicare"
 #. Default: "Attention: This content does not have any content. The title and description are not considered content and won't be showed"
 #: RepeatableContentBlock/Body
 msgid "emptyBlock"
-msgstr "Attenzione: questo contentuo non ha nessun elemento da mostrare. Il titolo e la descrizioone non sono considerati e non vengono mostrati."
+msgstr "Attenzione: questo contenuto non ha nessun elemento da mostrare. Il titolo e la descrizioone non sono considerati e non vengono mostrati."
 
 #. Default: "Show full-width image"
 #: RepeatableContentBlock/Sidebar
