@@ -21,7 +21,7 @@ msgstr ""
 msgid "emptyBlock"
 msgstr ""
 
-#. Default: "Show full-width image"
+#. Default: "Show full-width image (if available)"
 #: RepeatableContentBlock/Sidebar
 msgid "imageFullWidth"
 msgstr ""

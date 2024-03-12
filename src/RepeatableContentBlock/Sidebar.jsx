@@ -28,6 +28,10 @@ const messages = defineMessages({
     id: 'showContentImage',
     defaultMessage: 'Show content image (if available)',
   },
+  imageFullWidth: {
+    id: 'imageFullWidth',
+    defaultMessage: 'Show full-width image (if available)',
+  },
 });
 
 const Sidebar = ({ block, data, onChangeBlock, openObjectBrowser }) => {
@@ -142,6 +146,19 @@ const Sidebar = ({ block, data, onChangeBlock, openObjectBrowser }) => {
             });
           }}
         />
+        {data.showContentImage && (
+          <CheckboxWidget
+            id="imageFullWidth"
+            title={intl.formatMessage(messages.imageFullWidth)}
+            value={data.imageFullWidth ? data.imageFullWidth : false}
+            onChange={(field, value) => {
+              onChangeBlock(block, {
+                ...data,
+                [field]: value,
+              });
+            }}
+          />
+        )}
       </Segment>
     </Segment.Group>
   );

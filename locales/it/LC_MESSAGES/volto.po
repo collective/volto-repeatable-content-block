@@ -21,7 +21,7 @@ msgstr "Contenuto da replicare"
 msgid "emptyBlock"
 msgstr "Attenzione: questo contenuto non ha nessun elemento da mostrare. Il titolo e la descrizioone non sono considerati e non vengono mostrati."
 
-#. Default: "Show full-width image"
+#. Default: "Show full-width image (if available)"
 #: RepeatableContentBlock/Sidebar
 msgid "imageFullWidth"
 msgstr "Mostra l'immagine a tutta larghezza"

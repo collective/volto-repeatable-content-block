@@ -5,7 +5,13 @@
   padding: 1rem;
 }
 
-.repeatable-block-header .repeatable-block-content-infos.has-content {
+.repeatableContentBlock
+  .repeatable-block-header
+  .repeatable-block-content-infos.has-content {
   padding: 1rem 0;
   background-color: transparent;
+}
+
+.repeatableContentBlock .repeatable-block-image.full-width {
+  height: auto;
 }

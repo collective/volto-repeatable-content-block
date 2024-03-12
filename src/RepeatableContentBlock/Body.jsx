@@ -29,18 +29,30 @@ const Body = ({ content, edit, data }) => {
     <>
       {content && showHeader && (
         <div className="repeatable-block-header">
-          <UniversalLink item={!edit ? content : null} href={edit ? '#' : null}>
-            {data.showContentImage && (
-              <div className="repeatable-block-image">
+          {data.showContentImage && (
+            <div
+              className={cx('repeatable-block-image', {
+                'full-width': data.imageFullWidth,
+              })}
+            >
+              <UniversalLink
+                item={!edit ? content : null}
+                href={edit ? '#' : null}
+              >
                 <Image
                   item={content}
                   alt=""
                   className="img-fluid"
                   sizes="1300px"
                 />
-              </div>
-            )}
-            {(data.showContentTitle || data.showContentDescription) && (
+              </UniversalLink>
+            </div>
+          )}
+          {(data.showContentTitle || data.showContentDescription) && (
+            <UniversalLink
+              item={!edit ? content : null}
+              href={edit ? '#' : null}
+            >
               <div
                 className={cx('repeatable-block-content-infos', {
                   'has-content': renderContent != null,
@@ -55,8 +67,8 @@ const Body = ({ content, edit, data }) => {
                   </div>
                 )}
               </div>
-            )}
-          </UniversalLink>
+            </UniversalLink>
+          )}
         </div>
       )}
       {renderContent ?? <></>}
