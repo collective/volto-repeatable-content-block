@@ -1,5 +1,12 @@
 
 
+### [1.1.3](https://github.com/collective/volto-repeatable-content-block/compare/v1.1.2...v1.1.3) (2024-03-12)
+
+
+### Bug Fixes
+
+* image size ([7255907](https://github.com/collective/volto-repeatable-content-block/commit/72559078ecbe35f079d9875a2f4d7544d9b1853d))
+
 ### [1.1.2](https://github.com/collective/volto-repeatable-content-block/compare/v1.1.1...v1.1.2) (2024-03-12)
 
 
