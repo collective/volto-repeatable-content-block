@@ -27,7 +27,7 @@ const Body = ({ content, edit, data }) => {
 
   return showHeader || renderContent ? (
     <>
-      {showHeader && (
+      {content && showHeader && (
         <div className="repeatable-block-header">
           <UniversalLink item={!edit ? content : null} href={edit ? '#' : null}>
             {data.showContentImage && (
