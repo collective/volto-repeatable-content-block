@@ -36,7 +36,7 @@ const Body = ({ content, edit, data }) => {
                   item={content}
                   alt=""
                   className="img-fluid"
-                  sizes="80px"
+                  sizes="1300px"
                 />
               </div>
             )}
