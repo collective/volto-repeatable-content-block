@@ -1,5 +1,12 @@
 
 
+## [1.2.0](https://github.com/collective/volto-repeatable-content-block/compare/v1.1.4...v1.2.0) (2024-03-12)
+
+
+### Features
+
+* show image full-width ([b2894f8](https://github.com/collective/volto-repeatable-content-block/commit/b2894f8863350febacb577607d78fc512678fd01))
+
 ### [1.1.4](https://github.com/collective/volto-repeatable-content-block/compare/v1.1.3...v1.1.4) (2024-03-12)
 
 
