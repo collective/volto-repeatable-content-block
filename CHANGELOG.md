@@ -1,5 +1,12 @@
 
 
+### [1.1.4](https://github.com/collective/volto-repeatable-content-block/compare/v1.1.3...v1.1.4) (2024-03-12)
+
+
+### Bug Fixes
+
+* content is not yet loaded ([f9dbadc](https://github.com/collective/volto-repeatable-content-block/commit/f9dbadcaec0223a8bf9afe2273d854ac689bb6fd))
+
 ### [1.1.3](https://github.com/collective/volto-repeatable-content-block/compare/v1.1.2...v1.1.3) (2024-03-12)
 
 
