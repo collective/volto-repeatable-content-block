@@ -1,6 +1,6 @@
 import PropTypes from 'prop-types';
 import { defineMessages, useIntl } from 'react-intl';
-
+import cx from 'classnames';
 import { UniversalLink } from '@plone/volto/components';
 import RenderContentContent from './RenderContentContent';
 import './style.css';
@@ -18,16 +18,16 @@ const Body = ({ content, edit, data }) => {
   const intl = useIntl();
   const Image = config.getComponent({ name: 'Image' }).component;
 
-  const renderContent = RenderContentContent({ content: content });
+  let renderContent = RenderContentContent({ content: content });
 
-  return data.showContentTitle ||
+  const showHeader =
+    data.showContentTitle ||
     data.showContentDescription ||
-    renderContent ||
-    data.showContentImage ? (
+    data.showContentImage;
+
+  return showHeader || renderContent ? (
     <>
-      {(data.showContentTitle ||
-        data.showContentDescription ||
-        data.showContentImage) && (
+      {showHeader && (
         <div className="repeatable-block-header">
           <UniversalLink item={!edit ? content : null} href={edit ? '#' : null}>
             {data.showContentImage && (
@@ -41,7 +41,11 @@ const Body = ({ content, edit, data }) => {
               </div>
             )}
             {(data.showContentTitle || data.showContentDescription) && (
-              <div className="repeatable-block-content-infos">
+              <div
+                className={cx('repeatable-block-content-infos', {
+                  'has-content': renderContent != null,
+                })}
+              >
                 {data.showContentTitle && (
                   <h2 className="repeatable-block-title">{content.title}</h2>
                 )}

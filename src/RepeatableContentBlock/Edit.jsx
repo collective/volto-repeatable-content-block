@@ -36,7 +36,7 @@ const Edit = ({ block, data, selected, onChangeBlock, openObjectBrowser }) => {
     if (data.href && !contentRequest?.loading) {
       dispatch(getContent(flattenToAppURL(data.href), null, block));
     }
-    return () => dispatch(resetContent(data));
+    return () => dispatch(resetContent(block));
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [dispatch, block, data.href]);
 
@@ -45,23 +45,21 @@ const Edit = ({ block, data, selected, onChangeBlock, openObjectBrowser }) => {
       {data.href?.length > 0 ? (
         !data.href.startsWith('../') ? (
           <>
-            {content?.blocks && (
-              <div className="public-ui">
-                <div className="block repeatableContentBlock">
-                  <Body content={content} edit={true} data={data} />
-                </div>
+            <div className="public-ui">
+              <div className="block repeatableContentBlock">
+                <Body content={content} edit={true} data={data} />
               </div>
-            )}
+            </div>
           </>
         ) : (
-          <p className="empty-selection">
+          <div className="ui message warning">
             {intl.formatMessage(messages.pathNotExists)}
-          </p>
+          </div>
         )
       ) : (
-        <p className="empty-selection">
+        <div className="ui message warning">
           {intl.formatMessage(messages.emptySelection)}
-        </p>
+        </div>
       )}
       <SidebarPortal selected={selected}>
         <Sidebar

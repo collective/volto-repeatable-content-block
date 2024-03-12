@@ -4,3 +4,8 @@
   background-color: #eee;
   padding: 1rem;
 }
+
+.repeatable-block-header .repeatable-block-content-infos.has-content {
+  padding: 1rem 0;
+  background-color: transparent;
+}
