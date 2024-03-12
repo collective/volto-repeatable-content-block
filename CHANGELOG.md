@@ -1,5 +1,12 @@
 
 
+### [1.1.1](https://github.com/collective/volto-repeatable-content-block/compare/v1.1.0...v1.1.1) (2024-03-08)
+
+
+### Maintenance
+
+* fix typo and move RenderContentContent in another component ([818ed58](https://github.com/collective/volto-repeatable-content-block/commit/818ed5825e93258f7a38b9391091998f29f6da97))
+
 ## [1.1.0](https://github.com/collective/volto-repeatable-content-block/compare/v1.0.2...v1.1.0) (2024-03-08)
 
 
