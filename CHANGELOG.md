@@ -1,5 +1,17 @@
 
 
+### [1.2.1](https://github.com/collective/volto-repeatable-content-block/compare/v1.2.0...v1.2.1) (2024-03-19)
+
+
+### Bug Fixes
+
+* remove link when no show image is selected ([7823026](https://github.com/collective/volto-repeatable-content-block/commit/7823026487e35ac2872859c4eb588a8aa9ce2a3b))
+
+
+### Maintenance
+
+* removed console.log ([af18991](https://github.com/collective/volto-repeatable-content-block/commit/af189919439b8df78a8e703900fa210553324ce5))
+
 ## [1.2.0](https://github.com/collective/volto-repeatable-content-block/compare/v1.1.4...v1.2.0) (2024-03-12)
 
 
