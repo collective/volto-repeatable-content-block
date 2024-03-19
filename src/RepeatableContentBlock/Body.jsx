@@ -18,12 +18,25 @@ const Body = ({ content, edit, data }) => {
   const intl = useIntl();
   const Image = config.getComponent({ name: 'Image' }).component;
 
-  let renderContent = RenderContentContent({ content: content });
+  let renderContent = data.showContentText
+    ? RenderContentContent({ content: content })
+    : null;
 
   const showHeader =
     data.showContentTitle ||
     data.showContentDescription ||
     data.showContentImage;
+  console.log(data);
+
+  const ContentInfosWrapper = ({ showImage, children }) => {
+    return showImage ? (
+      <UniversalLink item={!edit ? content : null} href={edit ? '#' : null}>
+        {children}
+      </UniversalLink>
+    ) : (
+      <>{children}</>
+    );
+  };
 
   return showHeader || renderContent ? (
     <>
@@ -48,14 +61,12 @@ const Body = ({ content, edit, data }) => {
               </UniversalLink>
             </div>
           )}
-          {(data.showContentTitle || data.showContentDescription) && (
-            <UniversalLink
-              item={!edit ? content : null}
-              href={edit ? '#' : null}
-            >
+          {((data.showContentTitle && content.title) ||
+            (data.showContentDescription && content.description)) && (
+            <ContentInfosWrapper showImage={data.showContentImage}>
               <div
                 className={cx('repeatable-block-content-infos', {
-                  'has-content': renderContent != null,
+                  'no-bg': renderContent != null || !data.showContentImage,
                 })}
               >
                 {data.showContentTitle && (
@@ -67,7 +78,7 @@ const Body = ({ content, edit, data }) => {
                   </div>
                 )}
               </div>
-            </UniversalLink>
+            </ContentInfosWrapper>
           )}
         </div>
       )}

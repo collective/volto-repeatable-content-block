@@ -7,7 +7,7 @@
 
 .repeatableContentBlock
   .repeatable-block-header
-  .repeatable-block-content-infos.has-content {
+  .repeatable-block-content-infos.no-bg {
   padding: 1rem 0;
   background-color: transparent;
 }
