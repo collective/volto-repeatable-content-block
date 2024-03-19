@@ -26,7 +26,6 @@ const Body = ({ content, edit, data }) => {
     data.showContentTitle ||
     data.showContentDescription ||
     data.showContentImage;
-  console.log(data);
 
   const ContentInfosWrapper = ({ showImage, children }) => {
     return showImage ? (
