@@ -54,7 +54,7 @@ msgstr "Mostra l'immagine del contenuto"
 #. Default: "Show content text"
 #: RepeatableContentBlock/Sidebar
 msgid "showContentText"
-msgstr "Mostra i testo (blocchi) del contenuto"
+msgstr "Mostra il testo (blocchi) del contenuto"
 
 #. Default: "Show content title"
 #: RepeatableContentBlock/Sidebar
