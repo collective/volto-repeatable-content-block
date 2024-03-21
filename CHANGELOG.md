@@ -1,5 +1,12 @@
 
 
+### [1.2.2](https://github.com/collective/volto-repeatable-content-block/compare/v1.2.1...v1.2.2) (2024-03-20)
+
+
+### Bug Fixes
+
+* typo ([d6f49c1](https://github.com/collective/volto-repeatable-content-block/commit/d6f49c106a5d186279c4325a7362ffc480c582f1))
+
 ### [1.2.1](https://github.com/collective/volto-repeatable-content-block/compare/v1.2.0...v1.2.1) (2024-03-19)
 
 
