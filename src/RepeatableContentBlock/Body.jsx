@@ -17,8 +17,9 @@ const messages = defineMessages({
 const Body = ({ content, edit, data }) => {
   const intl = useIntl();
   const Image = config.getComponent({ name: 'Image' }).component;
+  const showContentText = data.showContentText ?? true;
 
-  let renderContent = data.showContentText
+  let renderContent = showContentText
     ? RenderContentContent({ content: content })
     : null;
 
