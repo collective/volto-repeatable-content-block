@@ -51,6 +51,12 @@ const Body = ({ content, edit, data }) => {
               <UniversalLink
                 item={!edit ? content : null}
                 href={edit ? '#' : null}
+                onClick={(e) => {
+                  if (edit) {
+                    e.preventDefault();
+                    e.stopPropagation();
+                  }
+                }}
               >
                 <Image
                   item={content}

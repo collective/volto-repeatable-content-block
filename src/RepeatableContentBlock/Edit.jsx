@@ -6,7 +6,7 @@ import { getContent, resetContent } from '@plone/volto/actions';
 import { SidebarPortal } from '@plone/volto/components';
 import { flattenToAppURL } from '@plone/volto/helpers';
 import Body from './Body';
-import Sidebar from './Sidebar';
+import { Sidebar } from './';
 
 const messages = defineMessages({
   emptySelection: {

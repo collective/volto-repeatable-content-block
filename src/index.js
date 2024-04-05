@@ -1,7 +1,9 @@
 /* eslint-disable import/no-anonymous-default-export */
 import sitemapSVG from '@plone/volto/icons/repeat.svg';
-import RepeatableContentEdit from './RepeatableContentBlock/Edit';
-import RepeatableContentView from './RepeatableContentBlock/View';
+import {
+  Edit as RepeatableContentEdit,
+  View as RepeatableContentView,
+} from './RepeatableContentBlock';
 
 export default (config) => {
   config.blocks.blocksConfig.repeatableContentBlock = {
@@ -13,6 +15,7 @@ export default (config) => {
     edit: RepeatableContentEdit,
     restricted: false,
     mostUsed: true,
+    hasOwnFocusManagement: false,
     security: {
       addPermission: [],
       view: [],
