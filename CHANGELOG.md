@@ -1,5 +1,12 @@
 
 
+### [1.2.4](https://github.com/collective/volto-repeatable-content-block/compare/v1.2.3...v1.2.4) (2024-04-05)
+
+
+### Bug Fixes
+
+* handle new block when only image is shown for the repeatable content ([8b029ee](https://github.com/collective/volto-repeatable-content-block/commit/8b029ee6311b30039ee3495ef5072a6264b6ef56))
+
 ### [1.2.3](https://github.com/collective/volto-repeatable-content-block/compare/v1.2.2...v1.2.3) (2024-03-21)
 
 
