@@ -1,5 +1,12 @@
 
 
+### [1.2.3](https://github.com/collective/volto-repeatable-content-block/compare/v1.2.2...v1.2.3) (2024-03-21)
+
+
+### Bug Fixes
+
+* default view contentText if no choice is setted, for backward compatibility ([80064b0](https://github.com/collective/volto-repeatable-content-block/commit/80064b0b63fe09996745624d71a2c35c12450f63))
+
 ### [1.2.2](https://github.com/collective/volto-repeatable-content-block/compare/v1.2.1...v1.2.2) (2024-03-20)
 
 
