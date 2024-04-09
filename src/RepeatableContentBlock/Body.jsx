@@ -54,7 +54,6 @@ const Body = ({ content, edit, data }) => {
                 onClick={(e) => {
                   if (edit) {
                     e.preventDefault();
-                    e.stopPropagation();
                   }
                 }}
               >
