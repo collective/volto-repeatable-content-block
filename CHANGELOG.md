@@ -1,5 +1,12 @@
 
 
+### [1.2.5](https://github.com/collective/volto-repeatable-content-block/compare/v1.2.4...v1.2.5) (2024-04-09)
+
+
+### Bug Fixes
+
+* select block if only image is shown ([3e24fb9](https://github.com/collective/volto-repeatable-content-block/commit/3e24fb98d116fc09c04a6b929c77e1ae2882eefc))
+
 ### [1.2.4](https://github.com/collective/volto-repeatable-content-block/compare/v1.2.3...v1.2.4) (2024-04-05)
 
 
