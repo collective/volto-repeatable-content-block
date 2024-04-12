@@ -11,6 +11,19 @@ For the content select you could decide to repeat one or more one of this option
 - blocks
 - image
 
+Or you can define a specific render of a content type from config:
+
+```jsx
+    config.settings['volto-repeatable-content-block'] = {
+      ...config.settings['volto-repeatable-content-block'],
+      renderer: {
+        ...(config.settings['volto-repeatable-content-block']?.renderer ?? {}),
+
+        FaqFolder: FaqFolderView, // this is the component to render the object type FaqFolder
+      },
+    },
+```
+
 ## Development
 
 You can develop an add-on in isolation using the boilerplate already provided by the add-on generator.

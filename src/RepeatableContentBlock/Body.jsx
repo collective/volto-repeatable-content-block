@@ -40,6 +40,7 @@ const Body = ({ content, edit, data }) => {
 
   return showHeader || renderContent ? (
     <>
+      {content && data.title && <h2 className="mt-5 mb-4">{data.title}</h2>}
       {content && showHeader && (
         <div className="repeatable-block-header">
           {data.showContentImage && (
