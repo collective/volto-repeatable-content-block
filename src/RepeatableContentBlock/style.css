@@ -1,15 +1,15 @@
 .repeatableContentBlock
   .repeatable-block-header
   .repeatable-block-content-infos {
-  background-color: #eee;
   padding: 1rem;
+  background-color: #eee;
 }
 
 .repeatableContentBlock
   .repeatable-block-header
   .repeatable-block-content-infos.no-bg {
-  background-color: transparent;
   padding: 1rem 0;
+  background-color: transparent;
 }
 
 .repeatableContentBlock .repeatable-block-image.full-width {
