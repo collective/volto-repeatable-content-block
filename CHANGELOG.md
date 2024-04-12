@@ -1,5 +1,12 @@
 
 
+## [1.3.0](https://github.com/collective/volto-repeatable-content-block/compare/v1.2.5...v1.3.0) (2024-04-12)
+
+
+### Features
+
+* added option to insert contenttypes view to the selection ([#2](https://github.com/collective/volto-repeatable-content-block/issues/2)) ([33aff9a](https://github.com/collective/volto-repeatable-content-block/commit/33aff9a07b0f167e8337e7fa0770bf5dc8838050))
+
 ### [1.2.5](https://github.com/collective/volto-repeatable-content-block/compare/v1.2.4...v1.2.5) (2024-04-09)
 
 
