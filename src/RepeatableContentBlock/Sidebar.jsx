@@ -32,6 +32,10 @@ const messages = defineMessages({
     id: 'imageFullWidth',
     defaultMessage: 'Show full-width image (if available)',
   },
+  title: {
+    id: 'title',
+    defaultMessage: 'Title',
+  },
 });
 
 const Sidebar = ({ block, data, onChangeBlock, openObjectBrowser }) => {
@@ -65,6 +69,18 @@ const Sidebar = ({ block, data, onChangeBlock, openObjectBrowser }) => {
       </header>
 
       <Segment className="form">
+        <TextWidget
+          id="title"
+          title={intl.formatMessage(messages.title)}
+          required={false}
+          value={data.title}
+          onChange={(name, value) => {
+            onChangeBlock(block, {
+              ...data,
+              [name]: value,
+            });
+          }}
+        />
         <TextWidget
           id="href"
           title={intl.formatMessage(messages.select_content)}
