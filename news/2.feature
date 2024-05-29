@@ -1,0 +1,1 @@
+Fixed condition for showing the image of the repeated content
