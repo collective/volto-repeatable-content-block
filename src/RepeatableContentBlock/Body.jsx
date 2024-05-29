@@ -38,33 +38,29 @@ const Body = ({ content, edit, data }) => {
     );
   };
 
+  let image_field = null;
+  if (content?.image) image_field = 'image';
+  if (content?.preview_image) image_field = 'preview_image';
+
   return showHeader || renderContent ? (
     <>
       {content && data.title && <h2 className="mt-5 mb-4">{data.title}</h2>}
       {content && showHeader && (
         <div className="repeatable-block-header">
-          {data.showContentImage && (
+          {data.showContentImage && image_field && (
             <div
               className={cx('repeatable-block-image', {
                 'full-width': data.imageFullWidth,
               })}
             >
-              <UniversalLink
-                item={!edit ? content : null}
-                href={edit ? '#' : null}
-                onClick={(e) => {
-                  if (edit) {
-                    e.preventDefault();
-                  }
-                }}
-              >
-                <Image
-                  item={content}
-                  alt=""
-                  className="img-fluid"
-                  sizes="1300px"
-                />
-              </UniversalLink>
+              <Image
+                item={content}
+                alt=""
+                className="img-fluid"
+                sizes="1300px"
+                imageField={image_field}
+                responsive={true}
+              />
             </div>
           )}
           {((data.showContentTitle && content.title) ||
