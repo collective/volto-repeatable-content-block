@@ -1,5 +1,17 @@
 
 
+### [1.3.1](https://github.com/collective/volto-repeatable-content-block/compare/v1.3.0...v1.3.1) (2024-05-29)
+
+
+### Bug Fixes
+
+* conditional for show image field ([10ebfd2](https://github.com/collective/volto-repeatable-content-block/commit/10ebfd28e6bf4c8650c1ef9442ea77acb0a5a55d))
+
+
+### Maintenance
+
+* news ([b50f3cc](https://github.com/collective/volto-repeatable-content-block/commit/b50f3cc7753a70e22432c3582797c782c2641d73))
+
 ## [1.3.0](https://github.com/collective/volto-repeatable-content-block/compare/v1.2.5...v1.3.0) (2024-04-12)
 
 
