@@ -9,6 +9,7 @@ import {
   getBaseUrl,
   hasBlocksData,
 } from '@plone/volto/helpers';
+import { RenderBlocks as VoltoRenderBlocks } from '@plone/volto/components';
 import config from '@plone/volto/registry';
 
 const messages = defineMessages({
@@ -30,8 +31,10 @@ const RenderBlocks = ({ content, exclude = ['title', 'description'] }) => {
   const intl = useIntl();
   const location = useLocation();
 
+  let blocksLayoutFiltered = [];
+  //filter blocks
   if (hasBlocksData(content)) {
-    const items =
+    blocksLayoutFiltered =
       content[blocksLayoutFieldname]?.items?.length > 0
         ? content[blocksLayoutFieldname].items.filter((block) => {
             const blockType = content[blocksFieldname]?.[block]?.['@type'];
@@ -40,45 +43,21 @@ const RenderBlocks = ({ content, exclude = ['title', 'description'] }) => {
         : null;
 
     //è il caso in cui c'è solo il primo blocco di testo vuoto. Non si vuole renderizzare il <br/>
-    if (items?.length === 1) {
-      const block = content[blocksFieldname][items[0]];
+    if (blocksLayoutFiltered?.length === 1) {
+      const block = content[blocksFieldname][blocksLayoutFiltered[0]];
       if (block['@type'] === 'text' && !block.text) {
-        return null;
+        blocksLayoutFiltered = [];
       }
       if (block['@type'] === 'slate' && block.plaintext?.length === 0) {
-        return null;
+        blocksLayoutFiltered = [];
       }
     }
-
-    return items?.length > 0 ? (
-      <>
-        {map(items, (block) => {
-          const blockType = content[blocksFieldname]?.[block]?.['@type'];
-          const Block = config.blocks.blocksConfig[blockType]?.['view'] || null;
-          if (Block != null) {
-            return (
-              <Block
-                key={block}
-                id={block}
-                properties={content}
-                data={content[blocksFieldname][block]}
-                path={getBaseUrl(location?.pathname || '')}
-              />
-            );
-          } else {
-            return (
-              <div key={block}>
-                {intl.formatMessage(messages.unknownBlock, {
-                  block: content[blocksFieldname]?.[block]?.['@type'],
-                })}
-              </div>
-            );
-          }
-        })}
-      </>
-    ) : null;
   }
-  return null;
+
+  const contentWithFilteredBlocks = {...content, [blocksLayoutFieldname]: {...content[blocksLayoutFieldname], items:blocksLayoutFiltered }};
+  return blocksLayoutFiltered?.length > 0 ? (
+      <VoltoRenderBlocks content={contentWithFilteredBlocks} location={location}/>
+  ) : null;
 };
 
 export default RenderBlocks;
