@@ -1,5 +1,12 @@
 
 
+### [1.3.2](https://github.com/collective/volto-repeatable-content-block/compare/v1.3.1...v1.3.2) (2024-06-24)
+
+
+### Bug Fixes
+
+* render blocks ([d2a54ee](https://github.com/collective/volto-repeatable-content-block/commit/d2a54ee94fb53995879b272e334a3a86e80e911a))
+
 ### [1.3.1](https://github.com/collective/volto-repeatable-content-block/compare/v1.3.0...v1.3.1) (2024-05-29)
 
 
