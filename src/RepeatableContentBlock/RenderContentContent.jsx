@@ -5,13 +5,13 @@ import RenderBlocks from '../helpers/RenderBlocks';
 import './style.css';
 import config from '@plone/volto/registry';
 
-const RenderContentContent = ({ content }) => {
+const RenderContentContent = ({ content, edit }) => {
   const renderer =
     config.settings['volto-repeatable-content-block']?.renderer?.[
       content?.['@type']
     ];
   if (renderer) {
-    return renderer({ content });
+    return renderer({ content, edit });
   }
   const blocks = hasBlocksData(content)
     ? RenderBlocks({ content: content })

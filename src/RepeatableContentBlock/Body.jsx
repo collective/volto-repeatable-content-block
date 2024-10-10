@@ -20,7 +20,7 @@ const Body = ({ content, edit, data }) => {
   const showContentText = data.showContentText ?? true;
 
   let renderContent = showContentText
-    ? RenderContentContent({ content: content })
+    ? RenderContentContent({ content: content, edit })
     : null;
 
   const showHeader =
