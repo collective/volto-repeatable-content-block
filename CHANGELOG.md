@@ -1,5 +1,17 @@
 
 
+## [1.4.0](https://github.com/collective/volto-repeatable-content-block/compare/v1.3.2...v1.4.0) (2024-10-10)
+
+
+### Features
+
+* added edit param to content renderer ([2bfae93](https://github.com/collective/volto-repeatable-content-block/commit/2bfae93977f2ef36541ee3609196f720201dc93b))
+
+
+### Maintenance
+
+* updated package manager ([a7c80d0](https://github.com/collective/volto-repeatable-content-block/commit/a7c80d01453221fed906c1436af7e4425633a2fd))
+
 ### [1.3.2](https://github.com/collective/volto-repeatable-content-block/compare/v1.3.1...v1.3.2) (2024-06-24)
 
 
