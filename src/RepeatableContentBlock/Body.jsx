@@ -40,7 +40,6 @@ const Body = ({ content, edit, data }) => {
   };
 
   const BodyWrapper = ({ children }) => {
-    console.log(content);
     return isLink ? (
       <UniversalLink item={!edit ? content : null} href={edit ? '#' : null}>
         {children}
