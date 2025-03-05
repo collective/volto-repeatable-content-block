@@ -18,6 +18,7 @@ const Body = ({ content, edit, data }) => {
   const intl = useIntl();
   const Image = config.getComponent({ name: 'Image' }).component;
   const showContentText = data.showContentText ?? true;
+  const isLink = content ? content['@type'] === 'Link' : false;
 
   let renderContent = showContentText
     ? RenderContentContent({ content: content, edit })
@@ -29,7 +30,17 @@ const Body = ({ content, edit, data }) => {
     data.showContentImage;
 
   const ContentInfosWrapper = ({ showImage, children }) => {
-    return showImage ? (
+    return showImage && !isLink ? (
+      <UniversalLink item={!edit ? content : null} href={edit ? '#' : null}>
+        {children}
+      </UniversalLink>
+    ) : (
+      <>{children}</>
+    );
+  };
+
+  const BodyWrapper = ({ children }) => {
+    return isLink ? (
       <UniversalLink item={!edit ? content : null} href={edit ? '#' : null}>
         {children}
       </UniversalLink>
@@ -41,9 +52,8 @@ const Body = ({ content, edit, data }) => {
   let image_field = null;
   if (content?.image) image_field = 'image';
   if (content?.preview_image) image_field = 'preview_image';
-
   return showHeader || renderContent ? (
-    <>
+    <BodyWrapper>
       {content && data.title && <h2 className="mt-5 mb-4">{data.title}</h2>}
       {content && showHeader && (
         <div className="repeatable-block-header">
@@ -85,7 +95,7 @@ const Body = ({ content, edit, data }) => {
         </div>
       )}
       {renderContent ?? <></>}
-    </>
+    </BodyWrapper>
   ) : edit ? (
     <p className="empty-selection">{intl.formatMessage(messages.emptyBlock)}</p>
   ) : (
