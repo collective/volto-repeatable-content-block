@@ -1,5 +1,12 @@
 
 
+## [1.5.0](https://github.com/collective/volto-repeatable-content-block/compare/v1.4.0...v1.5.0) (2025-03-05)
+
+
+### Features
+
+* if referenced obj is Link, wrap Body with <a> ([#3](https://github.com/collective/volto-repeatable-content-block/issues/3)) ([79651af](https://github.com/collective/volto-repeatable-content-block/commit/79651af0bd8136401b9e70d933b9831066550068))
+
 ## [1.4.0](https://github.com/collective/volto-repeatable-content-block/compare/v1.3.2...v1.4.0) (2024-10-10)
 
 
